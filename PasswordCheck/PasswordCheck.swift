@@ -104,8 +104,7 @@ internal extension String {
             data.withUnsafeBytes {
                 _ = CC_SHA1($0.baseAddress, CC_LONG(data.count), &digest)
             }
-            let hexBytes = digest.map { String(format: "%02hhx", $0) }
-            return hexBytes.joined()
+            return digest.hexStr
         }
     }
 }
