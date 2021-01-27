@@ -10,6 +10,7 @@
 		4F269CB025C1F89900278532 /* PasswordCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F269CA625C1F89900278532 /* PasswordCheck.framework */; };
 		4F269CB525C1F89900278532 /* PasswordCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F269CB425C1F89900278532 /* PasswordCheckTests.swift */; };
 		4F269CB725C1F89900278532 /* PasswordCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F269CA925C1F89900278532 /* PasswordCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F269CC925C1F8B600278532 /* PasswordCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F269CC825C1F8B600278532 /* PasswordCheck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		4F269CAF25C1F89900278532 /* PasswordCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F269CB425C1F89900278532 /* PasswordCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckTests.swift; sourceTree = "<group>"; };
 		4F269CB625C1F89900278532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F269CC825C1F8B600278532 /* PasswordCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				4F269CA925C1F89900278532 /* PasswordCheck.h */,
 				4F269CAA25C1F89900278532 /* Info.plist */,
+				4F269CC825C1F8B600278532 /* PasswordCheck.swift */,
 			);
 			path = PasswordCheck;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					4F269CA525C1F89900278532 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					4F269CAE25C1F89900278532 = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F269CC925C1F8B600278532 /* PasswordCheck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,8 @@
 		4F269CBB25C1F89900278532 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9NHZYLFW4V;
@@ -349,6 +356,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PasswordCheck/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.fheuschen.PasswordCheck;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +374,8 @@
 		4F269CBC25C1F89900278532 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9NHZYLFW4V;
@@ -373,6 +384,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PasswordCheck/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,6 +401,7 @@
 		4F269CBE25C1F89900278532 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9NHZYLFW4V;
 				INFOPLIST_FILE = PasswordCheckTests/Info.plist;
@@ -407,6 +420,7 @@
 		4F269CBF25C1F89900278532 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9NHZYLFW4V;
 				INFOPLIST_FILE = PasswordCheckTests/Info.plist;
