@@ -33,7 +33,7 @@ public struct PasswordChecker : Checker {
     private var hash: String
     
     internal init(hash: String) {
-        precondition(hash.count > 5)
+        precondition(hash.count == 40) //SHA-1 = 160B
         self.hash = hash
     }
     

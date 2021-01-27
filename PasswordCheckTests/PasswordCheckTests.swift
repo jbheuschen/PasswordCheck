@@ -24,5 +24,14 @@ class PasswordCheckTests: XCTestCase {
         }
         self.waitForExpectations(timeout: 5.0, handler: nil)
     }
+    
+    func testLikelyNotBreached() throws {
+        let expectation = self.expectation(description: "UUID is not breached")
+        try! PasswordCheck.check(forPassword: UUID().uuidString).execute {
+            XCTAssertTrue($0)
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 5.0, handler: nil)
+    }
 
 }
